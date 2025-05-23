@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="hotel_api.list">
+      <field name="name">hotel_api list</field>
+      <field name="model">hotel_api.hotel_api</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="hotel_api.action_window">
+      <field name="name">hotel_api window</field>
+      <field name="res_model">hotel_api.hotel_api</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="hotel_api.action_server">
+      <field name="name">hotel_api server</field>
+      <field name="model_id" ref="model_hotel_api_hotel_api"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="hotel_api" id="hotel_api.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="hotel_api.menu_1" parent="hotel_api.menu_root"/>
+    <menuitem name="Menu 2" id="hotel_api.menu_2" parent="hotel_api.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="hotel_api.menu_1_list" parent="hotel_api.menu_1"
+              action="hotel_api.action_window"/>
+    <menuitem name="Server to list" id="hotel_api" parent="hotel_api.menu_2"
+              action="hotel_api.action_server"/>
+-->
+  </data>
+</odoo>
